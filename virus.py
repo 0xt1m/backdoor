@@ -2,10 +2,13 @@ import socket, json, subprocess, os, cv2, pyautogui
 import base64, threading, time, webbrowser
 import keyboard
 
-from playsound import playsound
-from ctypes import cast, POINTER
-from comtypes import CLSCTX_ALL
-from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+try:
+	from playsound import playsound
+	from ctypes import cast, POINTER
+	from comtypes import CLSCTX_ALL
+	from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+except:
+	pass
 
 pyautogui.FAILSAFE = False
 
